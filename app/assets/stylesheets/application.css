@@ -13,11 +13,9 @@
  *= require_tree .
  *= require_self
  */
-table {
-    display: table;
-    border-collapse: separate;
+
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    text-indent: initial;
-    border-spacing: 2px;
-    border-color: grey;
 }

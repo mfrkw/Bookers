@@ -1,6 +1,6 @@
 <h1>Books</h1>
 
-<table>
+<table style="table-layout: fixed;">
   <thead>
     <tr>
       <th>Title</th>
@@ -22,17 +22,21 @@
   </tbody>
 </table>
 
+
+
+
 <h2>New book</h2>
 <%= form_with model:@book, url:'/books', local:true do |f| %>
-  <% if @book.errors.any? %>
-    
+
+<% if @book.errors.any? %>
+    <%= @book.errors.count %> error has occurred
     <% @book.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-  <% end %>
-<% end %>  
+      <%= message %>
+    <% end %>  
+<% end %>
 
 
-
+  
   <h4>Title</h4>
   <%= f.text_field :title %>
   <h4>Body</h4>
